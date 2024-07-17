@@ -1,0 +1,9 @@
+Dockerfile
+readme.md
+test-image.jpg
+modelTesting/
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.pytest_cache

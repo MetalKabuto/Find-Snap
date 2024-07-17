@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontendMAUIApplication.MainPage" 
+             Title=""
+             Padding="5">
+
+    <ScrollView >
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            >
+
+            <HorizontalStackLayout
+                Spacing="20"
+                HeightRequest="165">
+                <Image
+                    x:FieldModifier="public"
+                    x:Name="CategoryImage"
+                    Source="noimage.png"
+                    WidthRequest="165"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="category image" 
+                    IsVisible="Collapse"/>
+
+                <Image
+                    x:FieldModifier="public"
+                    x:Name="UserImage"
+                    Source="noimage.png"
+                    HeightRequest="165"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="player selected image"
+                    IsVisible="Collapse"/>
+            </HorizontalStackLayout>
+
+            <Label
+                x:FieldModifier="public"
+                x:Name="CategoryName"
+                Text="Wanna play a game?"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                x:FieldModifier="public"
+                x:Name="CategoryText"
+                Text="Start game to get a new assignment"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="assignment description" />
+            
+            <Button
+                x:FieldModifier="public"
+                x:Name="StartBtn"
+                Text="Start game" 
+                SemanticProperties.Hint="Click select your photo for the assignment"
+                Clicked="StartBtn_Clicked"
+                HorizontalOptions="Fill" />
+            
+            <Button
+                x:FieldModifier="public"
+                x:Name="CameraBtn"
+                Text="Open Camera" 
+                SemanticProperties.Hint="Click to use the camera in the app"
+                Clicked="CameraBtn_Clicked"
+                HorizontalOptions="Fill"
+                IsEnabled="False"
+                IsVisible="Collapse"/>
+
+            <Button
+                x:FieldModifier="public"
+                x:Name="SubmitBtn"
+                Text="Submit photo" 
+                SemanticProperties.Hint="Click select your photo for the assignment"
+                Clicked="SubmitBtn_Clicked"
+                HorizontalOptions="Fill"
+                IsEnabled="False"
+                IsVisible="Collapse"/>
+
+            <!--<Image
+                    x:FieldModifier="public"
+                    x:Name="testImage"
+                    Source="category3.jpg"
+                    WidthRequest="165"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="category image" />-->
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
